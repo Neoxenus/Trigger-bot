@@ -4,5 +4,5 @@
     "base_delay": 0.01,
     "trigger_delay": 10,
     "color_tolerance": 70,
-    "always_enabled": false
+    "threshold": 1
 }

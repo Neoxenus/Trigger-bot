@@ -43,6 +43,7 @@ class triggerbot:
             self.triggerDelay = data["trigger_delay"] 
             self.baseDelay = data["base_delay"]
             self.colorTolerance = data["color_tolerance"]
+            self.threshold = data["threshold"]
             self.R, self.G, self.B = (250, 100, 250)  # purple
         except:
             exiting()
@@ -64,7 +65,7 @@ class triggerbot:
         matchingPixels = pixels[colorMask]
         print(pixels[0:3, 0])
         
-        if self.triggerbot and len(matchingPixels) > 1:
+        if self.triggerbot and len(matchingPixels) > self.threshold:
             delayPercentage = self.triggerDelay / 100.0  
             
             actualDelay = self.baseDelay + self.baseDelay * delayPercentage
