@@ -4,5 +4,10 @@
     "base_delay": 0.01,
     "trigger_delay": 10,
     "color_tolerance": 70,
-    "threshold": 1
+    "threshold": 1,
+    "rgb": [
+          100, 
+          250, 
+          0
+        ]
 }
