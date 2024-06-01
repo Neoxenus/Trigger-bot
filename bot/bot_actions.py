@@ -16,10 +16,10 @@ class BotActions:
         
     def searcher_in_o(self):
         img = self.screen_capture.capture()
-        matching_pixels = self.image_processor.process(img)
+        is_found = self.image_processor.process(img)
         
         #print(self.triggerbot, len(matching_pixels), self.data.threshold)
-        if self.triggerbot and len(matching_pixels) > self.data.threshold:
+        if self.triggerbot and is_found:
 
             delay_percentage = self.data.trigger_delay / 100.0
             actual_delay = self.data.base_delay + self.data.base_delay * delay_percentage
