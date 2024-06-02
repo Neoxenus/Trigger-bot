@@ -1,6 +1,6 @@
 {
-    "trigger_hotkey": "0xA0", //shift
-    "exit_hotkey": "0x78",    //F9
+    "trigger_hotkey": "0xA0", 
+    "exit_hotkey": "0x78",    
     "base_delay": 0.01,
     "trigger_delay": 10,
     "color_tolerance": 35,
