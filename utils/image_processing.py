@@ -1,4 +1,3 @@
-# image_processing.py
 import numpy as np
 class ImageProcessor:
     def __init__(self, color_tolerance, threshold, R, G, B):

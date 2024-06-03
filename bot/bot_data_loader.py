@@ -13,7 +13,7 @@ class BotDataLoader:
             bot_data = BotData(
                 trigger_hotkey=int(data["trigger_hotkey"], 16),
                 exit_hotkey=int(data["exit_hotkey"], 16),
-                trigger_delay=data["trigger_delay"],
+                random_delay=data["random_delay"],
                 base_delay=data["base_delay"],
                 color_tolerance=data["color_tolerance"],
                 threshold=data["threshold"],
