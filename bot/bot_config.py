@@ -17,7 +17,5 @@ class BotConfig:
         int(WIDTH / 2 + ZONE),
         int(HEIGHT / 2 + ZONE)
     )
-
-    @staticmethod
-    def get_screen_size():
-        return WIDTH, HEIGHT
+    # def get_grab_zone():
+    #     return GRAB_ZONE

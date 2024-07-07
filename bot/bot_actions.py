@@ -1,17 +1,17 @@
 from utils.screen_capture import ScreenCapture
 from utils.image_processing import ImageProcessor
-from utils.utils import exiting
+from utils.utils import Utils
 from bot.bot_controller import BotController
 from bot.bot_data import BotData
 from utils.delay_manager import DelayManager
 
 class BotActions:
-    def __init__(self, data: BotData, grab_zone):
+    def __init__(self, data: BotData):
         self.data = data
         self.triggerbot = False
         self.exit_program = False
         self.bot_controller = BotController(data.trigger_hotkey, data.exit_hotkey)
-        self.screen_capture = ScreenCapture(grab_zone)
+        self.screen_capture = ScreenCapture()
         self.image_processor = ImageProcessor(data.color_tolerance, data.threshold, *data.color)
         self.delay_manager = DelayManager(data.base_delay, data.random_delay)
         
@@ -34,7 +34,7 @@ class BotActions:
             if self.bot_controller.is_exit_hotkey_pressed():
                 print("trigger hold mode exit")
                 self.exit_program = True
-                exiting()
+                Utils.exiting()
 
     def starter(self):
         while not self.exit_program:

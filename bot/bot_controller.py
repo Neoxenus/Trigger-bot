@@ -11,6 +11,7 @@ class BotController:
 
     def is_exit_hotkey_pressed(self):
         return win32api.GetAsyncKeyState(self.exit_hotkey) < 0
+        
     def shoot(self):
         print("enemy is found")
         #keyboard.press_and_release("k")
